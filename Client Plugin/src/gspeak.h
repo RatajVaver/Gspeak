@@ -1,5 +1,5 @@
 /*
-* Gspeak 2.0
+* Gspeak 2.7
 * by Thendon.exe
 * Sneaky Rocks
 */

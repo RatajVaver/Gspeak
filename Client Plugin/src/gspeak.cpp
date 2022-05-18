@@ -1,5 +1,5 @@
 /*
-* Gspeak 2.6
+* Gspeak 2.7
 * by Thendon.exe
 * Sneaky Rocks
 */
@@ -91,7 +91,7 @@ const char* ts3plugin_name() {
 }
 
 const char* ts3plugin_version() {
-	return "2.6";
+	return "2.7";
 }
 
 int ts3plugin_apiVersion() {
@@ -103,7 +103,7 @@ const char* ts3plugin_author() {
 }
 
 const char* ts3plugin_description() {
-	return "This plugin connects Garry's Mod with Teamspeak3";
+	return "This plugin connects Garry's Mod with TeamSpeak 3";
 }
 
 void ts3plugin_setFunctionPointers(const struct TS3Functions funcs) {
@@ -281,7 +281,7 @@ bool gs_isChannel(uint64 serverConnectionHandlerID, uint64 channelID) {
 	char *chname;
 	if (ts3Functions.getChannelVariableAsString(serverConnectionHandlerID, channelID, CHANNEL_NAME, &chname) == ERROR_ok) {
 		std::string str(chname);
-		if (str.find("Gspeak") != string::npos) { //MAY CHANGE TO ID
+		if (str.find("Gspeak") != string::npos || str.find("GSpeak") != string::npos) { // Fix for common problem
 			return true;
 		}
 	}

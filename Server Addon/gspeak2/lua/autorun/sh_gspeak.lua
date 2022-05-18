@@ -10,7 +10,7 @@
 //
 //************************************************************
 
-gspeak = { version = 2600 };
+gspeak = { version = 2700 };
 
 //************************************************************
 // Change these Variables ingame by entering !gspeak if possible

@@ -1,11 +1,11 @@
 /*
-* Gspeak 2.6
+* Gspeak 2.7
 * by Thendon.exe
 * Sneaky Rocks
 */
 
 #define GMMODULE
-#define TSLIB_VERSION 2600
+#define TSLIB_VERSION 2700
 
 #include <GarrysMod/Lua/Interface.h>
 #include <Windows.h>
