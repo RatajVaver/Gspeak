@@ -37,7 +37,7 @@ static struct TS3Functions ts3Functions;
 #define CHANNELINFO_BUFSIZE 512
 #define RETURNCODE_BUFSIZE 128
 
-#define GSPEAK_VERSION 2600
+#define GSPEAK_VERSION 2700
 #define SCAN_SPEED 100
 #define VOLUME_MAX 1800
 #define SHORT_SIZE 32767
