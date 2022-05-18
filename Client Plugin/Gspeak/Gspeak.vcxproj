@@ -93,13 +93,13 @@
     <LinkIncremental>false</LinkIncremental>
     <TargetName>gspeak_win32</TargetName>
     <OutDir>$(SolutionDir)$(Configuration)\$(Platform)\Gspeak\</OutDir>
-    <IntDir>$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>gspeak_win64</TargetName>
     <OutDir>$(SolutionDir)$(Configuration)\$(Platform)\Gspeak\</OutDir>
-    <IntDir>$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

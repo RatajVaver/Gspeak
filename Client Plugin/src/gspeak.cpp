@@ -210,7 +210,7 @@ void gs_shutdown() {
 
 void gs_criticalError(int errorCode) {
 	char msg[48];
-	sprintf(msg, "[Gspeak] critical error - Code: %d", errorCode);
+	sprintf_s(msg, "[Gspeak] critical error - Code: %d", errorCode);
 	ts3Functions.printMessageToCurrentTab(msg);
 	printf("%s\n", msg);
 }
@@ -221,7 +221,7 @@ int gs_openMapFile(HANDLE *hMapFile, TCHAR *name, unsigned int buf_size) {
 		int code = GetLastError();
 		printf("[Gspeak] error code - %d\n", code);
 		if (code == 5) {
-			ts3Functions.printMessageToCurrentTab("[Gspeak] access denied - restart Teamspeak3 with Administrator!");
+			ts3Functions.printMessageToCurrentTab("[Gspeak] access denied - restart TeamSpeak 3 as Administrator!");
 			return 1;
 		}
 		else if (code == 2) {

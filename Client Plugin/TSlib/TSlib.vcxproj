@@ -92,13 +92,13 @@
     <LinkIncremental>false</LinkIncremental>
     <TargetName>gmcl_tslib_win32</TargetName>
     <OutDir>$(SolutionDir)$(Configuration)\$(Platform)\TSlib\</OutDir>
-    <IntDir>$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>gmcl_tslib_win64</TargetName>
     <OutDir>$(SolutionDir)$(Configuration)\$(Platform)\TSlib\</OutDir>
-    <IntDir>$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
