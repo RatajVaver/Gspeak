@@ -1,5 +1,5 @@
 /*
-* Gspeak 2.7
+* Gspeak 2.7.1
 * by Thendon.exe
 * Sneaky Rocks
 */
@@ -37,7 +37,7 @@ static struct TS3Functions ts3Functions;
 #define CHANNELINFO_BUFSIZE 512
 #define RETURNCODE_BUFSIZE 128
 
-#define GSPEAK_VERSION 2700
+#define GSPEAK_VERSION 2710
 #define SCAN_SPEED 100
 #define VOLUME_MAX 1800
 #define SHORT_SIZE 32767
@@ -91,7 +91,7 @@ const char* ts3plugin_name() {
 }
 
 const char* ts3plugin_version() {
-	return "2.7";
+	return "2.7.1";
 }
 
 int ts3plugin_apiVersion() {
@@ -302,7 +302,7 @@ void gs_cmdCheck(uint64 serverConnectionHandlerID, anyID clientID) {
 	if (status->command <= 0)
 		return;
 
-	bool success;
+	bool success = false;
 	switch (status->command) {
 	case CMD_RENAME:
 		success = gs_nameCheck(serverConnectionHandlerID, clientID);
@@ -476,7 +476,7 @@ void ts3plugin_onTalkStatusChangeEvent(uint64 serverConnectionHandlerID, int tal
 	}
 	else {
 		int it = gs_findClient(clientID);
-		if (it > -1) {
+		if (it != -1) {
 			if (talkStatus != STATUS_TALKING) clients[it].talking = false;
 		}
 	}
@@ -492,7 +492,7 @@ void ts3plugin_onEditPostProcessVoiceDataEvent(uint64 serverConnectionHandlerID,
 	int it = gs_findClient(clientID);
 
 	//If a client was found in array
-	if (it > -1) {
+	if (it != -1) {
 		if (clients[it].talking != true) clients[it].talking = true;
 		//If volume between 0 and 1
 		if (clients[it].volume_gm > 0 && clients[it].volume_gm <= 1) {

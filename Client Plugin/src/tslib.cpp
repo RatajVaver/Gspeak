@@ -1,11 +1,11 @@
 /*
-* Gspeak 2.7
+* Gspeak 2.7.1
 * by Thendon.exe
 * Sneaky Rocks
 */
 
 #define GMMODULE
-#define TSLIB_VERSION 2700
+#define TSLIB_VERSION 2710
 
 #include <GarrysMod/Lua/Interface.h>
 #include <Windows.h>
@@ -159,7 +159,7 @@ int gs_searchPlayer(lua_State* state, int clientID, bool *exist)
 		}
 
 		//Check if spot not free
-		if (clients[spot].clientID > -1)
+		if (clients[spot].clientID != -1)
 			//reset deletable spot
 			if (del_spot != -1)
 				del_spot = -1;
@@ -173,7 +173,7 @@ int gs_searchPlayer(lua_State* state, int clientID, bool *exist)
 		}
 
 	//return free spot
-	if (free_spot > -1)
+	if (free_spot != -1)
 		return free_spot;
 	//return first avaliable spot if nothing was deleted
 	if (del_spot == -1)

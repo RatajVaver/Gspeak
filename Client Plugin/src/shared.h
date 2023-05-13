@@ -13,7 +13,7 @@
 #define CMD_BUF 16
 
 struct Clients {
-	short clientID;
+	int clientID;
 	float pos[3];
 	float volume_gm;
 	float volume_ts;
@@ -22,7 +22,7 @@ struct Clients {
 };
 
 struct Status {
-	short clientID;
+	int clientID;
 	char name[NAME_BUF];
 	short tslibV;
 	short gspeakV;

@@ -1,7 +1,7 @@
 #include "shared.h"
 
 bool gs_inChannel( Status *status ) {
-	return status->clientID > -1;
+	return status->clientID != -1;
 }
 
 //Not realy save to say though
