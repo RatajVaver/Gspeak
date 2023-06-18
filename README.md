@@ -1,7 +1,7 @@
-# Gspeak 2.7
+# Gspeak 2.7.1
 
 Gspeak Source Code
-This is the updated and full version of Gspeak (for server owners), now working with Teamspeak 3.3! For free! Enjoy!
+This is the updated and full version of Gspeak (for server owners), now working with Teamspeak 3.6.0! For free! Enjoy!
 
 Features:
 
@@ -16,7 +16,7 @@ Features:
 Requirements:
 
 * Teamspeak3 server and a channel containing the letters "Gspeak" in its name
-* Clients have to install Gspeak on their devices: http://5.9.67.102/gmod/gspeak/
+* Clients have to install Gspeak on their devices: https://guard.leosight.cz/prospect/gspeak.zip
 
 How does it work?
 
